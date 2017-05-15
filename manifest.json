@@ -1,0 +1,23 @@
+{
+  "name": "Special English",
+  "description": "Will highlight in yellow words not in the sepcial English dictionary",
+  "version": "2.0",
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js", "thirdParty/jquery-3.2.1.min.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Highlight"
+  },
+  "manifest_version": 2
+}
